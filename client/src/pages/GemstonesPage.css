@@ -1,0 +1,138 @@
+.gemstones-hero {
+  background: var(--bg-dark);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.gemstones-hero h1 { color: var(--champagne-light); }
+.gemstones-hero .section-label { color: var(--champagne); }
+
+.gemstones-hero__desc {
+  max-width: 580px;
+  margin: 0 auto 36px;
+  color: rgba(255,255,255,0.6);
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.gemstones-hero__search {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gemstones-hero__search-input {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+  transition: border-color var(--transition-base);
+  text-align: center;
+}
+
+.gemstones-hero__search-input:focus { border-color: var(--champagne); }
+.gemstones-hero__search-input::placeholder { color: rgba(255,255,255,0.3); }
+
+.gemstones-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.gemstone-card {
+  background: white;
+  border: 1px solid var(--border-light);
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px 24px;
+  text-align: center;
+}
+
+.gemstone-card:hover {
+  border-color: var(--champagne-light);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.gemstone-card__visual {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  overflow: hidden;
+  transition: transform var(--transition-base);
+}
+
+.gemstone-card:hover .gemstone-card__visual { transform: scale(1.08); }
+
+.gemstone-card__inner-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+}
+
+.gemstone-card__info { flex: 1; }
+
+.gemstone-card__name {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+.gemstone-card__chakra {
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 10px;
+}
+
+.gemstone-card__energy {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.gemstone-card__zodiac {
+  font-size: 11px;
+  color: var(--champagne-light);
+  letter-spacing: 1px;
+}
+
+.gemstone-card__cta {
+  margin-top: 16px;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--champagne);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.gemstone-card:hover .gemstone-card__cta { opacity: 1; }
+
+.gemstone-card-skeleton {
+  height: 320px;
+  background: linear-gradient(90deg, var(--ivory) 25%, var(--moonlight) 50%, var(--ivory) 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.gemstone-philosophy { background: var(--ivory); }
+.gemstone-philosophy p { max-width: 680px; margin: 0 auto; font-size: 15px; line-height: 1.9; text-align: center; }
+
+@media (max-width: 1024px) { .gemstones-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px) { .gemstones-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .gemstones-grid { grid-template-columns: 1fr; } }

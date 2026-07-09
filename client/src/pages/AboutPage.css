@@ -1,0 +1,126 @@
+.about-hero {
+  position: relative;
+  padding: 100px 0 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.about-hero__bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, #2a1f12 100%);
+}
+
+.about-hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(184,150,106,0.15) 0%, transparent 70%);
+}
+
+.about-hero__content { position: relative; z-index: 1; }
+.about-hero__content h1 { color: var(--champagne-light); }
+.about-hero__tagline { font-family: var(--font-serif); font-size: 20px; font-style: italic; color: rgba(255,255,255,0.6); margin-top: 16px; }
+
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.about-text p { font-size: 15px; line-height: 1.9; margin-bottom: 16px; }
+
+.about-visual {
+  position: relative;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-visual__orb {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.about-visual__orb--1 {
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle at 40% 40%, rgba(184,150,106,0.2), rgba(184,150,106,0.05));
+  border: 1px solid rgba(184,150,106,0.15);
+  animation: float 6s ease-in-out infinite;
+}
+
+.about-visual__orb--2 {
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(184,150,106,0.1), transparent);
+  animation: float 4s ease-in-out infinite reverse;
+}
+
+.about-visual__quote {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-visual__quote p {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-style: italic;
+  line-height: 1.8;
+  color: var(--champagne-dark);
+}
+
+/* Energy Section */
+.about-energy { background: var(--ivory); }
+
+.about-energy__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+
+.about-energy-card {
+  background: white;
+  padding: 28px 24px;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.about-energy-card:hover { border-color: var(--champagne-light); transform: translateY(-2px); }
+
+.about-energy-card h3 { font-family: var(--font-serif); font-size: 18px; margin-bottom: 12px; color: var(--champagne-dark); }
+.about-energy-card p { font-size: 13px; line-height: 1.7; }
+
+/* Inspiration */
+.about-inspiration__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+
+.about-inspiration-item { text-align: center; }
+
+.about-inspiration-item__icon { font-size: 32px; color: var(--champagne); margin-bottom: 16px; }
+.about-inspiration-item h4 { font-family: var(--font-serif); font-size: 18px; margin-bottom: 10px; }
+.about-inspiration-item p { font-size: 13px; line-height: 1.7; color: var(--text-muted); }
+
+/* Craft */
+.about-craft { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+
+.about-craft__text p { font-size: 15px; line-height: 1.9; }
+
+.about-craft__values { display: flex; flex-direction: column; gap: 16px; padding-top: 8px; }
+
+.about-craft__value {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+.about-craft__value span:first-child { color: var(--champagne); font-size: 16px; }
+
+@media (max-width: 1024px) {
+  .about-energy__grid { grid-template-columns: repeat(2, 1fr); }
+  .about-inspiration__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .about-craft { grid-template-columns: 1fr; gap: 32px; }
+  .about-inspiration__grid { grid-template-columns: repeat(2, 1fr); }
+  .about-energy__grid { grid-template-columns: 1fr; }
+}

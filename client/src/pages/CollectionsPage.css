@@ -1,0 +1,142 @@
+.collections-page__hero {
+  background: var(--bg-dark);
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.collections-page__hero h1 { color: var(--champagne-light); }
+.collections-page__hero .section-label { color: var(--champagne); }
+.collections-page__hero-desc { max-width: 580px; margin: 0 auto; color: rgba(255,255,255,0.6); font-size: 15px; line-height: 1.9; }
+
+.collections-page__filters {
+  background: white;
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 108px;
+  z-index: 100;
+}
+
+.collections-filters {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.collections-filters::-webkit-scrollbar { display: none; }
+
+.collections-filter-btn {
+  flex-shrink: 0;
+  padding: 16px 24px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.collections-filter-btn:hover { color: var(--champagne); }
+.collections-filter-btn.active { color: var(--champagne); border-bottom-color: var(--champagne); }
+
+.collections-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.collection-page-card {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+  overflow: hidden;
+}
+
+.collection-page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--champagne-light);
+}
+
+.collection-page-card__image {
+  position: relative;
+  height: 280px;
+}
+
+.collection-page-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0,0,0,0.5) 100%);
+}
+
+.collection-page-card__type {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(184, 150, 106, 0.9);
+  color: white;
+  padding: 4px 10px;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.collection-page-card__body { padding: 24px; background: white; flex: 1; display: flex; flex-direction: column; }
+
+.collection-page-card__subtitle {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--champagne);
+  margin-bottom: 8px;
+}
+
+.collection-page-card__name {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.collection-page-card__era {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.collection-page-card__story {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.collection-page-card__cta {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--champagne);
+}
+
+.collection-page-skeleton {
+  height: 480px;
+  background: linear-gradient(90deg, var(--ivory) 25%, var(--moonlight) 50%, var(--ivory) 75%);
+  background-size: 200% auto;
+  animation: shimmer 1.5s linear infinite;
+}
+
+@media (max-width: 1024px) { .collections-page__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .collections-page__grid { grid-template-columns: 1fr; } }

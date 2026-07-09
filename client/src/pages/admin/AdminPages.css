@@ -1,0 +1,86 @@
+/* Shared Admin Page Styles */
+.admin-form { display: flex; flex-direction: column; gap: 0; }
+
+.admin-form__row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 0;
+}
+
+.admin-form__checkboxes { display: flex; gap: 24px; margin-bottom: 20px; }
+
+.admin-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.admin-checkbox input { accent-color: var(--champagne); }
+
+.admin-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--ivory);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+.admin-badge--gold { background: #FEF9E7; color: var(--champagne-dark); border-color: var(--champagne-light); }
+
+.admin-btn-sm {
+  padding: 6px 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: var(--ivory);
+  border: 1px solid var(--border-light);
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all var(--transition-base);
+}
+
+.admin-btn-sm:hover { background: var(--champagne); border-color: var(--champagne); color: white; }
+.admin-btn-sm--danger:hover { background: #E74C3C; border-color: #E74C3C; color: white; }
+
+.admin-table__product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-table__product-img {
+  width: 40px;
+  height: 40px;
+  background: var(--ivory);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: var(--champagne-light);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.admin-table__product-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.admin-status-select {
+  padding: 4px 8px;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  border: 1px solid var(--border-light);
+  background: white;
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  cursor: pointer;
+  outline: none;
+}
+
+.admin-status-select:focus { border-color: var(--champagne); }

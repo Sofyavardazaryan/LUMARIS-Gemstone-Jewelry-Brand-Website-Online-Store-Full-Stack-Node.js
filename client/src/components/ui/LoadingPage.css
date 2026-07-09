@@ -1,0 +1,26 @@
+.loading-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #2e2118 0%, #1c1410 60%, #151009 100%);
+}
+
+.loading-page__logo {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  color: #4a3828;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.loading-page__spinner {
+  display: none;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
